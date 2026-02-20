@@ -1,0 +1,123 @@
+/* ===== General form components ===== */
+
+.general-input,
+.general-select {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+}
+
+.general-input__label,
+.general-select__label {
+  font-size: 12px;
+  color: #bdbdbd;
+}
+
+/* Input */
+.general-input__field {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 0;
+  border-bottom: 2px solid #d11a2a; /* red underline */
+}
+
+.general-input__icon {
+  color: #8d8d8d;
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.general-input__control {
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #eaeaea;
+  font-size: 14px;
+}
+
+.general-input__control::placeholder {
+  color: #6f6f6f;
+}
+
+/* Select */
+.general-select__control {
+  width: 100%;
+  background: #1f1f1f;
+  color: #eaeaea;
+  border: 1px solid #2a2a2a;
+  outline: none;
+  padding: 10px 12px;
+  border-radius: 3px;
+  font-size: 14px;
+}
+
+.general-select__control:focus {
+  border-color: #d11a2a;
+}
+
+/* Button */
+.general-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  background: #c8101e;
+  color: #ffffff;
+  border: 1px solid #8f0b14;
+
+  padding: 10px 16px;
+  border-radius: 2px;
+  font-size: 13px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.general-button:hover {
+  filter: brightness(1.05);
+}
+
+.general-button:active {
+  transform: translateY(1px);
+}
+
+.general-button__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.general-button__label {
+  line-height: 1;
+}
+
+/* SearchBar */
+.general-searchbar {
+  width: 100%;
+}
+
+.general-searchbar__input {
+  width: 100%;
+  background: #1f1f1f;
+  color: #eaeaea;
+
+  border: 1px solid #2a2a2a;
+  outline: none;
+
+  padding: 10px 14px;
+  border-radius: 999px; /* pill */
+  font-size: 14px;
+}
+
+.general-searchbar__input::placeholder {
+  color: #6f6f6f;
+}
+
+.general-searchbar__input:focus {
+  border-color: #3a3a3a;
+}
