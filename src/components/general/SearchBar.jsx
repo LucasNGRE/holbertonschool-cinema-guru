@@ -8,12 +8,12 @@ export default function SearchBar({ title, setTitle }) {
   return (
     <div className="general-searchbar">
       <input
-        className="general-searchbar__input"
-        type="text"
-        value={title ?? ""}
-        onChange={handleInput}
-        placeholder="Search..."
-      />
+  className="general-searchbar__input"
+  type="text"
+  value={title}
+  onChange={handleInput}
+  placeholder="Search Movies"
+/>
     </div>
   );
 }

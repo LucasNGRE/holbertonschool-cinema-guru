@@ -18,12 +18,11 @@ export default function Filter({
   setTitle,
 }) {
   const SORT_OPTIONS = [
-    { value: "", label: "Default" },
-    { value: "latest", label: "Latest" },
-    { value: "oldest", label: "Oldest" },
-    { value: "highestrated", label: "Highest Rated" },
-    { value: "lowestrated", label: "Lowest Rated" },
-  ];
+  { value: "", label: "Latest" },          // default = released DESC
+  { value: "oldest", label: "Oldest" },    // released ASC
+  { value: "highestrated", label: "Highest Rated" },
+  { value: "lowestrated", label: "Lowest Rated" },
+];
 
   const TAGS = [
     "Action",
@@ -44,11 +43,10 @@ export default function Filter({
   return (
   <div className="filter">
     <div className="filter__layout">
-      {/* LEFT : inputs */}
       <div className="filter__left">
-        <div className="filter__row">
-          <SearchBar title={title} setTitle={setTitle} />
+        <SearchBar title={title} setTitle={setTitle} />
 
+        <div className="filter__row">
           <Input
             label="Min Date:"
             type="number"
@@ -74,7 +72,6 @@ export default function Filter({
         </div>
       </div>
 
-      {/* RIGHT : tags */}
       <div className="filter__right">
         <ul className="tags tags--right">
           {TAGS.map((g) => (

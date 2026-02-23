@@ -23,3 +23,97 @@
   border: 6px solid #111;
   box-sizing: border-box;
 }
+
+/* ===================== */
+/* ======= PAGES ======= */
+/* ===================== */
+
+.page {
+  padding: 16px 18px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* container title (centers inline-block title) */
+.page__title {
+  margin: 26px 0 22px;
+  text-align: center;
+}
+
+/* actual title */
+.page__title--underline {
+  position: relative;
+  display: inline-block; /* largeur = texte */
+  padding-bottom: 10px;
+
+  font-size: 40px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+/* red underline = largeur du texte uniquement */
+.page__title--underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 3px;
+  background: #b50f1a;
+}
+
+/* ===================== */
+/* ===== MOVIES GRID ==== */
+/* ===================== */
+
+.movies-grid {
+  list-style: none;
+  padding: 0;
+  margin: 18px 0 0;
+
+  display: grid;
+  gap: 16px;
+
+  /* Desktop: 5 colonnes */
+  grid-template-columns: repeat(5, 260px);
+
+  /* centre le bloc */
+  justify-content: center;
+}
+
+/* ↓↓↓ Responsive breakpoints ↓↓↓ */
+@media (max-width: 1500px) {
+  .movies-grid {
+    grid-template-columns: repeat(4, 260px);
+  }
+}
+
+@media (max-width: 1220px) {
+  .movies-grid {
+    grid-template-columns: repeat(3, 260px);
+  }
+}
+
+@media (max-width: 940px) {
+  .movies-grid {
+    grid-template-columns: repeat(2, 260px);
+  }
+}
+
+@media (max-width: 660px) {
+  .movies-grid {
+    grid-template-columns: repeat(1, 260px);
+  }
+}
+
+/* ===================== */
+/* ===== BUTTON AREA ==== */
+/* ===================== */
+
+.page__actions {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}

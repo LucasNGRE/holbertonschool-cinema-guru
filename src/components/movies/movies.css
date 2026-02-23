@@ -1,4 +1,7 @@
-/* ===== Tags ===== */
+/* ===================== */
+/* ======= TAGS ========= */
+/* ===================== */
+
 .tags {
   display: flex;
   flex-wrap: wrap;
@@ -30,12 +33,14 @@
   color: #ffffff;
 }
 
-/* When tags are shown as filter tags (same style, but you can tweak later) */
 .tag--filter {
   opacity: 1;
 }
 
-/* ===== Filter container (on fera mieux après) ===== */
+/* ===================== */
+/* ======= FILTER ====== */
+/* ===================== */
+
 .filter {
   width: 100%;
   background: #2a2a2a;
@@ -44,25 +49,7 @@
   box-sizing: border-box;
 }
 
-.filter__row {
-  display: grid;
-  grid-template-columns: 1fr 140px 140px 180px;
-  gap: 12px;
-  align-items: end;
-}
-
-/* small screens */
-@media (max-width: 900px) {
-  .filter__row {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-.filter .general-searchbar__input {
-  background: #1f1f1f;
-}
-
-/* ===== Filter layout (inputs left, tags right) ===== */
+/* Layout: left inputs, right tags */
 .filter__layout {
   display: grid;
   grid-template-columns: 1fr 420px;
@@ -74,29 +61,66 @@
   min-width: 0;
 }
 
+/* SearchBar should NOT stretch full width */
+.filter__left .general-searchbar {
+  max-width: 360px; /* ajuste 320-380 si besoin */
+}
+
+/* Min/Max/Sort row under search */
+.filter__row {
+  display: grid;
+  grid-template-columns: 140px 140px 180px;
+  gap: 12px;
+  align-items: end;
+  margin-top: 10px;
+}
+
+/* Search input background */
+.filter .general-searchbar__input {
+  background: #1f1f1f;
+}
+
+/* Right tags aligned LEFT (like figma) */
 .filter__right {
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 .tags--right {
-  justify-content: flex-end;
+  justify-content: flex-start;
+  width: 100%;
 }
 
-/* Responsive: tags go under on small screens */
+/* Responsive */
 @media (max-width: 1000px) {
   .filter__layout {
     grid-template-columns: 1fr;
   }
+
+  .filter__left .general-searchbar {
+    max-width: 100%;
+  }
+
   .filter__right {
     justify-content: flex-start;
   }
+
   .tags--right {
     justify-content: flex-start;
   }
 }
 
-/* ===== MovieCard ===== */
+@media (max-width: 900px) {
+  .filter__row {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ===================== */
+/* ===== MOVIE CARD ===== */
+/* ===================== */
+
 .movie-card {
   list-style: none;
   width: 260px;
@@ -132,7 +156,7 @@
   color: #ffffff;
   cursor: pointer;
   font-size: 16px;
-  opacity: 0.55;          /* semi-transparent par défaut */
+  opacity: 0.55; /* semi-transparent par défaut */
   user-select: none;
   transition: opacity 0.15s ease, transform 0.15s ease;
 }
@@ -146,7 +170,7 @@
 }
 
 .movie-card__icon.active {
-  opacity: 1;             /* blanc plein quand actif */
+  opacity: 1; /* blanc plein quand actif */
   color: #ffffff;
 }
 
@@ -175,7 +199,7 @@
 }
 
 .movie-card__genre {
-  background: #1b1b1b;
+  background: #b50f1a;
   border: 1px solid #b50f1a;
   color: #fff;
   padding: 3px 10px;
