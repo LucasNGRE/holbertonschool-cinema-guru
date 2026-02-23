@@ -53,7 +53,6 @@
   text-transform: uppercase;
 }
 
-/* red underline = largeur du texte uniquement */
 .page__title--underline::after {
   content: "";
   position: absolute;
@@ -68,32 +67,58 @@
 /* ===== MOVIES GRID ==== */
 /* ===================== */
 
-/*
-  Objectif:
-  - Quand il y a 10 films => 2 lignes de 5 (si l'écran le permet)
-  - Quand il y a peu de films (ex: 2) => ils sont centrés (comme en flex)
-  - Responsive automatique (plus besoin des breakpoints fixes)
-*/
 .movies-grid {
   list-style: none;
   padding: 0;
-  margin: 18px 0 0;
+  margin: 18px auto 0;
 
   display: grid;
   gap: 16px;
 
-  /* centre le bloc */
   justify-content: center;
+  justify-items: center;
 
-  /* nombre de colonnes automatique et centré */
+  /* cartes fixes */
   grid-template-columns: repeat(auto-fit, 260px);
 
-  /* centre les items */
-  justify-items: center;
+  /* max 5 colonnes */
+  max-width: calc(5 * 260px + 4 * 16px);
 }
 
+/* Breakpoints: on réduit le max de colonnes */
+@media (max-width: 1500px) {
+  .movies-grid {
+    max-width: calc(4 * 260px + 3 * 16px);
+  }
+}
 
+@media (max-width: 1220px) {
+  .movies-grid {
+    max-width: calc(3 * 260px + 2 * 16px);
+  }
+}
+
+@media (max-width: 940px) {
+  .movies-grid {
+    max-width: calc(2 * 260px + 1 * 16px);
+  }
+}
+
+@media (max-width: 660px) {
+  .movies-grid {
+    max-width: 100%;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .movie-card {
+    width: 100%;
+    max-width: 260px;
+  }
+}
+
+/* ===================== */
 /* ===== MOVIE CARD ===== */
+/* ===================== */
 
 .movie-card {
   list-style: none;
@@ -103,18 +128,14 @@
   box-sizing: border-box;
   overflow: hidden;
 
-  /* animation DOIT être ici */
   transition: transform 0.18s ease, box-shadow 0.18s ease;
 }
 
-
-/* hover zoom */
 .movie-card:hover {
   transform: scale(1.05);
   z-index: 10;
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.7);
 }
-
 
 /* ===================== */
 /* ===== BUTTON AREA ==== */
