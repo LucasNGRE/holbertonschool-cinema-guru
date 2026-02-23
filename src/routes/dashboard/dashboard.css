@@ -82,20 +82,39 @@
   display: grid;
   gap: 16px;
 
-  /* Centre le "bloc" de colonnes */
+  /* centre le bloc */
   justify-content: center;
 
-  /*
-    Colonnes de 260px.
-    auto-fit adapte le nombre de colonnes à la place disponible.
-    Si 5 colonnes rentrent => 5 colonnes (donc 2 lignes de 5 pour 10 films).
-    Si seulement 2 films => 2 colonnes centrées.
-  */
-  grid-template-columns: repeat(auto-fit, minmax(260px, 260px));
+  /* nombre de colonnes automatique et centré */
+  grid-template-columns: repeat(auto-fit, 260px);
 
-  /* Centre chaque item dans sa cellule */
+  /* centre les items */
   justify-items: center;
 }
+
+
+/* ===== MOVIE CARD ===== */
+
+.movie-card {
+  list-style: none;
+  width: 260px;
+  background: #2a2a2a;
+  border: 6px solid #111;
+  box-sizing: border-box;
+  overflow: hidden;
+
+  /* animation DOIT être ici */
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+
+/* hover zoom */
+.movie-card:hover {
+  transform: scale(1.05);
+  z-index: 10;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.7);
+}
+
 
 /* ===================== */
 /* ===== BUTTON AREA ==== */
