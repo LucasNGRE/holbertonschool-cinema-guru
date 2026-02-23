@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import "./App.css";
 
+import Authentication from "./routes/auth/Authentication";
 import Dashboard from "./routes/Dashboard";
-import Authentication from "./routes/Authentication";
 
 export default function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -38,7 +38,10 @@ export default function App() {
       {isLoggedIn ? (
         <Dashboard userUsername={userUsername} />
       ) : (
-        <Authentication />
+        <Authentication
+          setIsLoggedIn={setIsLoggedIn}
+          setUserUsername={setUserUsername}
+        />
       )}
     </div>
   );

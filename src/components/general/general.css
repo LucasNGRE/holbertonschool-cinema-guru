@@ -14,7 +14,7 @@
   color: #bdbdbd;
 }
 
-/* Input */
+/* Input container */
 .general-input__field {
   display: flex;
   align-items: center;
@@ -23,6 +23,7 @@
   border-bottom: 2px solid #d11a2a; /* red underline */
 }
 
+/* Left icon */
 .general-input__icon {
   color: #8d8d8d;
   font-size: 14px;
@@ -31,12 +32,13 @@
   justify-content: center;
 }
 
+/* Input element */
 .general-input__control {
   width: 100%;
   background: transparent;
   border: none;
   outline: none;
-  color: #eaeaea;
+  color: #eaeaea; /* default for dark backgrounds */
   font-size: 14px;
 }
 
@@ -44,7 +46,50 @@
   color: #6f6f6f;
 }
 
-/* Select */
+/* Password toggle (eye icon) */
+.general-input__toggle {
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin-left: 8px;
+  cursor: pointer;
+  color: #8d8d8d;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.general-input__toggle:hover {
+  filter: brightness(1.2);
+}
+
+
+/* ===== Auth page overrides (white background) ===== */
+/* This makes text readable on white auth card */
+.auth-card .general-input__control {
+  color: #222;
+}
+
+.auth-card .general-input__control::placeholder {
+  color: #8c8c8c;
+}
+
+.auth-card .general-input__label,
+.auth-card .general-select__label {
+  color: #6f6f6f;
+}
+
+.auth-card .general-input__icon {
+  color: #a0a0a0;
+}
+
+.auth-card .general-input__toggle {
+  color: #a0a0a0;
+}
+
+
+/* ===== Select ===== */
+
 .general-select__control {
   width: 100%;
   background: #1f1f1f;
@@ -60,7 +105,9 @@
   border-color: #d11a2a;
 }
 
-/* Button */
+
+/* ===== Button ===== */
+
 .general-button {
   display: inline-flex;
   align-items: center;
@@ -96,7 +143,9 @@
   line-height: 1;
 }
 
-/* SearchBar */
+
+/* ===== SearchBar ===== */
+
 .general-searchbar {
   width: 100%;
 }
@@ -110,7 +159,7 @@
   outline: none;
 
   padding: 10px 14px;
-  border-radius: 999px; /* pill */
+  border-radius: 999px;
   font-size: 14px;
 }
 

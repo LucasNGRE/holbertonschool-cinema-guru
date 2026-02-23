@@ -1,0 +1,118 @@
+/* Full page dark background */
+.auth-page {
+  min-height: 100vh;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: #1b1b1b;
+  padding: 32px 12px;
+  box-sizing: border-box;
+}
+
+/* White card container */
+.auth-card {
+  width: 560px;
+  max-width: 100%;
+  background: #ffffff;
+  border: 6px solid #2b2b2b;
+  box-sizing: border-box;
+}
+
+/* Tabs container */
+.auth-tabs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* Tab buttons */
+.auth-tab-btn {
+  border: none;
+  padding: 14px 0;
+  color: #ffffff;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 15px;
+  background: #b50f1a;
+  transition: background 0.2s ease;
+}
+
+.auth-tab-btn.active {
+  background: #e11725;
+}
+
+/* Content area */
+.auth-content {
+  padding: 36px 42px 34px;
+}
+
+/* Title */
+.auth-title {
+  margin: 0 0 22px;
+  text-align: center;
+  font-size: 20px;
+  color: #222;
+}
+
+/* Form fields container */
+.auth-fields {
+  display: grid;
+  gap: 18px;
+}
+
+/* Button container */
+.auth-actions {
+  margin-top: 22px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+/* Tablet & mobile */
+@media (max-width: 600px) {
+  .auth-card {
+    width: 100%;
+    border-width: 4px;
+  }
+
+  .auth-content {
+    padding: 24px 18px 22px;
+  }
+
+  .auth-tab-btn {
+    padding: 12px 0;
+    font-size: 14px;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 380px) {
+  .auth-content {
+    padding: 20px 14px 18px;
+  }
+
+  .auth-title {
+    font-size: 18px;
+  }
+}
+
+/* Make inputs readable on white auth card */
+.auth-card .general-input__control {
+  color: #222;
+}
+
+.auth-card .general-input__control::placeholder {
+  color: #8c8c8c;
+}
+
+.auth-card .general-input__label,
+.auth-card .general-select__label {
+  color: #6f6f6f;
+}
+
+.auth-card .general-input__icon {
+  color: #a0a0a0;
+}
