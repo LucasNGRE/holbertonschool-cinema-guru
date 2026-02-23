@@ -3,7 +3,7 @@ import axios from "axios";
 import "./App.css";
 
 import Authentication from "./routes/auth/Authentication";
-import Dashboard from "./routes/Dashboard";
+import Dashboard from "./routes/dashboard/Dashboard";
 
 export default function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -36,7 +36,7 @@ export default function App() {
   return (
     <div className="App">
       {isLoggedIn ? (
-        <Dashboard userUsername={userUsername} />
+        <Dashboard userUsername={userUsername} setIsLoggedIn={setIsLoggedIn} />
       ) : (
         <Authentication
           setIsLoggedIn={setIsLoggedIn}
