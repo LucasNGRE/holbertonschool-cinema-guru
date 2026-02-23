@@ -1,10 +1,16 @@
 import "./general.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-export default function Button({ label, className = "", onClick, icon }) {
+export default function Button({
+  label,
+  className = "",
+  onClick,
+  icon,
+  type = "button",
+}) {
   return (
     <button
-      type="button"
+      type={type}
       className={`general-button ${className}`.trim()}
       onClick={onClick}
     >

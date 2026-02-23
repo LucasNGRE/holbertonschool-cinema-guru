@@ -28,7 +28,7 @@ export default function Login({ username, password, setUsername, setPassword }) 
       </div>
 
       <div className="auth-actions">
-        <Button label="Sign In" onClick={() => {}} icon={faKey} />
+        <Button label="Sign In" icon={faKey} type="submit" />
       </div>
     </>
   );

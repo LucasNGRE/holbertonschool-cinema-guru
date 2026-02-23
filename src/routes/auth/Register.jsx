@@ -33,7 +33,7 @@ export default function Register({
       </div>
 
       <div className="auth-actions">
-        <Button label="Sign Up" onClick={() => {}} icon={faPlus} />
+        <Button label="Sign Up" icon={faPlus} type="submit" />
       </div>
     </>
   );
