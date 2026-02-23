@@ -50,3 +50,122 @@
 .navbar__logout:hover {
   filter: brightness(1.1);
 }
+/* ===================== */
+/* ====== SIDEBAR ====== */
+/* ===================== */
+
+.sidebar {
+  width: 240px;
+  min-height: calc(100vh - 56px);
+  background: #c8101e; /* red */
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+/* small mode = just icons */
+.sidebar--small {
+  width: 60px;
+}
+
+/* toggle area (top) */
+.sidebar__top {
+  display: flex;
+  justify-content: flex-end;
+  padding: 8px 8px 6px;
+}
+
+.sidebar__toggle {
+  background: rgba(0, 0, 0, 0.25);
+  border: none;
+  color: #fff;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+}
+
+/* Navigation list */
+.sidebar__nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar__item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 12px 14px;
+
+  color: #fff;
+  font-weight: 700;
+  font-size: 13px;
+
+  cursor: pointer;
+  user-select: none;
+
+  background: rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.sidebar__item:hover {
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.sidebar__item.active {
+  background: rgba(0, 0, 0, 0.22);
+}
+
+.sidebar__icon {
+  width: 18px;
+  color: #fff;
+}
+
+.sidebar__text {
+  white-space: nowrap;
+}
+
+/* Activities block */
+.sidebar__activities {
+  margin-top: 8px;
+  padding: 0 10px 10px;
+}
+
+.sidebar__activitiesHeader {
+  background: #3a3a3a;
+  color: #fff;
+  font-weight: 800;
+  padding: 8px 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sidebar__activitiesTitle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sidebar__activitiesList {
+  list-style: none;
+  margin: 0;
+  padding: 10px 10px;
+  background: #2a2a2a;
+  border: 1px solid #444;
+  max-height: 360px;
+  overflow-y: auto;
+}
+
+.sidebar__chev {
+  transition: transform 0.2s ease;
+}
+
+.sidebar__chev.open {
+  transform: rotate(90deg);
+}
+.sidebar {
+  transition: width 0.18s ease;
+}
