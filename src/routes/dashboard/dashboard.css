@@ -68,6 +68,12 @@
 /* ===== MOVIES GRID ==== */
 /* ===================== */
 
+/*
+  Objectif:
+  - Quand il y a 10 films => 2 lignes de 5 (si l'écran le permet)
+  - Quand il y a peu de films (ex: 2) => ils sont centrés (comme en flex)
+  - Responsive automatique (plus besoin des breakpoints fixes)
+*/
 .movies-grid {
   list-style: none;
   padding: 0;
@@ -76,36 +82,19 @@
   display: grid;
   gap: 16px;
 
-  /* Desktop: 5 colonnes */
-  grid-template-columns: repeat(5, 260px);
-
-  /* centre le bloc */
+  /* Centre le "bloc" de colonnes */
   justify-content: center;
-}
 
-/* ↓↓↓ Responsive breakpoints ↓↓↓ */
-@media (max-width: 1500px) {
-  .movies-grid {
-    grid-template-columns: repeat(4, 260px);
-  }
-}
+  /*
+    Colonnes de 260px.
+    auto-fit adapte le nombre de colonnes à la place disponible.
+    Si 5 colonnes rentrent => 5 colonnes (donc 2 lignes de 5 pour 10 films).
+    Si seulement 2 films => 2 colonnes centrées.
+  */
+  grid-template-columns: repeat(auto-fit, minmax(260px, 260px));
 
-@media (max-width: 1220px) {
-  .movies-grid {
-    grid-template-columns: repeat(3, 260px);
-  }
-}
-
-@media (max-width: 940px) {
-  .movies-grid {
-    grid-template-columns: repeat(2, 260px);
-  }
-}
-
-@media (max-width: 660px) {
-  .movies-grid {
-    grid-template-columns: repeat(1, 260px);
-  }
+  /* Centre chaque item dans sa cellule */
+  justify-items: center;
 }
 
 /* ===================== */
