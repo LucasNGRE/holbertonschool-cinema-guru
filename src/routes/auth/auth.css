@@ -35,12 +35,12 @@
   cursor: pointer;
   font-weight: 600;
   font-size: 15px;
-  background: #b50f1a;
+  background: #BB000E;
   transition: background 0.2s ease;
 }
 
 .auth-tab-btn.active {
-  background: #e11725;
+  background: #E31C25;
 }
 
 /* Content area */
