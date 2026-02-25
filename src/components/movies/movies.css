@@ -13,7 +13,7 @@
 
 .tag {
   background: #1b1b1b;
-  border: 1px solid #b50f1a;
+  border: 1px solid #E31C25;
   color: #e6e6e6;
   padding: 4px 10px;
   border-radius: 999px;
@@ -28,8 +28,8 @@
 }
 
 .tag--selected {
-  background: #e11725;
-  border-color: #e11725;
+  background: #E31C25;
+  border-color: #E31C25;
   color: #ffffff;
 }
 
@@ -227,8 +227,8 @@
 }
 
 .movie-card__genre {
-  background: #b50f1a;
-  border: 1px solid #b50f1a;
+  background: #E31C25;
+  border: 1px solid #E31C25;
   color: #fff;
   padding: 2px 8px;
   border-radius: 999px;
