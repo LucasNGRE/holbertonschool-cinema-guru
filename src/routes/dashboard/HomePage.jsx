@@ -9,8 +9,8 @@ import Button from "../../components/general/Button";
 export default function HomePage() {
   const [movies, setMovies] = useState([]);
 
-  const [minYear, setMinYear] = useState(1970);
-  const [maxYear, setMaxYear] = useState(2022);
+  const [minYear, setMinYear] = useState("");
+  const [maxYear, setMaxYear] = useState("");
   const [genres, setGenres] = useState([]);
   const [sort, setSort] = useState(""); // "" = Latest (default backend)
   const [title, setTitle] = useState("");
