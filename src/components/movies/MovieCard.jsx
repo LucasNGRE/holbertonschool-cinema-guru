@@ -105,10 +105,11 @@ export default function MovieCard({ movie }) {
             <FontAwesomeIcon icon={faStar} />
           </span>
         </div>
+
+        <h3 className="movie-card__title">{title}</h3>
       </div>
 
       <div className="movie-card__body">
-        <h3 className="movie-card__title">{title}</h3>
 
         <p className="movie-card__plot">
           {plot.length > 90 ? `${plot.slice(0, 90)}...` : plot}
